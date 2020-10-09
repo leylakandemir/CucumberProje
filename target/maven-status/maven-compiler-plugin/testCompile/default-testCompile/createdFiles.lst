@@ -1,0 +1,16 @@
+stepdefinitions\EbayStepDefinitions.class
+stepdefinitions\WalmartStepDefinitions.class
+stepdefinitions\AmazonAramaStepDefinitions.class
+runners\AmazonRunner.class
+pages\AmazonPage.class
+stepdefinitions\Hooks.class
+pages\EbayPage.class
+runners\Runner.class
+pages\WalmartPage.class
+utilities\Driver.class
+utilities\ConfigurationReader.class
+runners\EbayRunner.class
+pages\HepsiburadaPage.class
+pages\GooglePage.class
+stepdefinitions\HepsiburadaAramaStepDefinitions.class
+stepdefinitions\GoogleAramaStepDefinitions.class
