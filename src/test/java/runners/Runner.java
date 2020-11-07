@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features",//features klasorunun adresi
         glue = "stepdefinitions",//testlerin icerisinde oldugu paketin ismi
         tags = "@walmart",
-        dryRun = false //methodlari kopyalamak istiyorsaniz burayi true yapin kodlar calismaz
+        dryRun = false//methodlari kopyalamak istiyorsaniz burayi true yapin kodlar calismaz
                         // ve siz de methodlari kopyalarsiniz
 )
 public class Runner {

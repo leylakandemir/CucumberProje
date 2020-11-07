@@ -12,8 +12,9 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@hotelresevationsearch",
+        tags = "@hotelroomedit",//{"@tag1", "@tag2","@tag3"}
         dryRun = false
+
 )
 public class KoalaPalaceRunner {
 

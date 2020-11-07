@@ -135,6 +135,57 @@ public class KoalaPalacePage {
     @FindBy(xpath = "//tbody/tr")
     public List<WebElement> HRLTKAYITLAR;
 
+    ///////////////////////////////////////////////
+    @FindBy(id = "Code")
+    public WebElement HECB;
+
+    @FindBy(id = "Name")
+    public WebElement HENB;
+
+    @FindBy(id = "Address")
+    public WebElement HEAB;
+
+    @FindBy(id = "Phone")
+    public WebElement HEPB;
+
+    @FindBy(id = "Email")
+    public WebElement HEEB;
+
+    @FindBy(id = "IDGroup")
+    public WebElement HEIB;
+
+
+    @FindBy(xpath = "//button[@class='btn green']")
+    public WebElement HESB;
+
+    @FindBy(className = "bootbox-body")
+    public WebElement HESL;
+
+    @FindBy(linkText = "Properties")
+    public WebElement hotelroomEditproperties;
+
+    @FindBy (id = "lkpBarcodeTypes")
+    public WebElement hotelroompropertiesdropdown;
+
+    @FindBy (id = "txtBarcodeCode")
+    public WebElement hotelroomcodekutusu;
+
+    @FindBy (id = "txtBarcode")
+    public WebElement hotelroomvaluekutusu;
+
+
+    @FindBy (xpath = "//button[@onclick='javascript:AddBarcode();return false;']")
+    public WebElement hotelroomsave;
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement hoteleditdeletebutonu;
+
+
+
+
+
+
+
 
 
 

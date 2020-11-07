@@ -5,10 +5,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en_old.Ac;
 import io.cucumber.java.eo.Se;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.KoalaPalacePage;
 import utilities.Driver;
 
@@ -355,6 +358,101 @@ public class KoalaPalaceStepDef {
         }
 
     }
+    ///////////////////////////////////////////////////////////////////
+
+    @Given("user goes to hoteledit website")
+    public void user_goes_to_hoteledit_website() {
+    Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin/Edit?Id=4");
+    }
+
+    @Given("user edits code part {string}")
+    public void user_edits_code_part(String string) {
+        page.HECB.clear();
+    page.HECB.sendKeys(string);
+    }
+    @Given("user edits name part {string}")
+    public void user_edits_name_part(String string) {
+        page.HENB.clear();
+        page.HENB.sendKeys(string);
+
+    }
+    @Given("user edits address part {string}")
+    public void user_edits_address_part(String string) {
+        page.HEAB.clear();
+page.HEAB.sendKeys(string);
+    }
+    @Given("user edits phone part {string}")
+    public void user_edits_phone_part(String string) {
+        page.HEPB.clear();
+       page.HEPB.sendKeys(string);
+    }
+    @Given("user edits email part {string}")
+    public void user_edits_email_part(String string) {
+        page.HEEB.clear();
+        page.HEEB.sendKeys(string);
+    }
+
+    @Given("user selects group part {string}")
+    public void user_selects_group_part(String string) {
+        Select select=new Select(page.HEIB);
+      select.selectByVisibleText(string);
+    }
+    @Then("user clicks save button")
+    public void user_clicks_save_button() {
+      page.HESB.click();
+    }
+    @Then("user assert this process")
+    public void user_assert_this_process() {
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
+        boolean yazidogruMu = wait.until(ExpectedConditions.textToBe(By.className("bootbox-body"),"Hotel was updated successfully"));
+        Assert.assertTrue(yazidogruMu);
+
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////
+    @Given("user goes to hotelroomedit website {string}")
+    public void user_goes_to_hotelroomedit_website(String string) {
+    Driver.getDriver().get(string);
+    }
+
+    @Given("user clicks properties part")
+    public void user_clicks_properties_part() {
+    page.hotelroomEditproperties.click();
+    }
+    @Given("user selects {string} part")
+    public void user_selects_part(String string) {
+    Select select=new Select(page.hotelroompropertiesdropdown);
+    select.selectByVisibleText(string);
+    }
+    @Given("user writes code {string}")
+    public void user_writes_code(String string) {
+    page.hotelroomcodekutusu.sendKeys(string);
+    }
+    @Then("user writes as value {string}")
+    public void user_writes_as_value(String string) {
+    page.hotelroomvaluekutusu.sendKeys(string);
+    }
+    @Then("user clicks save2 button")
+    public void user_clicks_save2_button() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+      page.hotelroomsave.click();
+    }
+    @Then("user asserts new record on properties")
+    public void user_asserts_new_record_on_properties() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        boolean gorunuyorMu = page.hoteleditdeletebutonu.isDisplayed();
+        Assert.assertTrue(gorunuyorMu);
+    }
+
+
 
 
 

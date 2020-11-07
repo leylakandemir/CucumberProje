@@ -48,7 +48,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "TX26_kullanici hotelreservationlist sayfasinda verileri gorerek reservation yapar",
+  "name": "TC28_kullanici hotelroomedit sayfasinda duzenleme yapar",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -56,46 +56,76 @@ formatter.scenario({
       "name": "@koalapalace"
     },
     {
-      "name": "@hotelresevationsearch"
+      "name": "@hotelroomedit"
     }
   ]
 });
 formatter.step({
-  "name": "kullanici hotelroomreservationlist sayfasina gider",
+  "name": "user goes to hotelroomedit website \"http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id\u003d148\"",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_sayfasina_gider()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_goes_to_hotelroomedit_website(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelroomreservationlist hotelroomid bolumunde \"team06\" secer",
+  "name": "user clicks properties part",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_hotelroomid_bolumunde_secer(java.lang.String)"
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_clicks_properties_part()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelroomreservationlist arama kutusuna tiklar",
+  "name": "user selects \"room prop1\" part",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_arama_kutusuna_tiklar()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_selects_part(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelroomreservationlist kayitlarini inceler",
+  "name": "user writes code \"4444\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_writes_code(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user writes as value \"sistem bozuldu\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaPalaceStepDef.kullanici_hotelroomreservationlist_kayitlarini_inceler()"
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_writes_as_value(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks save2 button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_clicks_save2_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user asserts new record on properties",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaPalaceStepDef.user_asserts_new_record_on_properties()"
 });
 formatter.result({
   "status": "passed"

@@ -290,6 +290,29 @@
         And kullanici hotelroomreservationlist arama kutusuna tiklar
         Then kullanici hotelroomreservationlist kayitlarini inceler
 
+        @hoteledit
+        Scenario: TC27_kullanici hoteledit sayfasinda duzenleme yapar
+          Given user goes to hoteledit website
+          And user edits code part "3333"
+          And user edits name part "leyla"
+          And user edits address part "sevgi sok."
+          And user edits phone part "235678888"
+          And user edits email part "k,lkdks.kldjlks."
+          And user selects group part "Hotel Type2"
+          Then user clicks save button
+          Then user assert this process
+
+    @hotelroomedit
+    Scenario: TC28_kullanici hotelroomedit sayfasinda duzenleme yapar
+      Given user goes to hotelroomedit website "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=148"
+      And user clicks properties part
+      And user selects "room prop1" part
+      And user writes code "4444"
+      Then user writes as value "sistem bozuldu"
+      And user clicks save2 button
+      Then user asserts new record on properties
+
+
 
 
 

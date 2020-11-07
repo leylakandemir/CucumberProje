@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="61.633">
-<testcase classname="Koala Palace" name="TX26_kullanici hotelreservationlist sayfasinda verileri gorerek reservation yapar" time="60.772">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="50.018">
+<testcase classname="Koala Palace" name="TC28_kullanici hotelroomedit sayfasinda duzenleme yapar" time="49.359">
 <system-out><![CDATA[Given kullanici koalapalace admin sayfasina gider...........................passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
-Given kullanici hotelroomreservationlist sayfasina gider....................passed
-And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer.passed
-And kullanici hotelroomreservationlist arama kutusuna tiklar................passed
-Then kullanici hotelroomreservationlist kayitlarini inceler.................passed
+Given user goes to hotelroomedit website "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=148".passed
+And user clicks properties part.............................................passed
+And user selects "room prop1" part..........................................passed
+And user writes code "4444".................................................passed
+Then user writes as value "sistem bozuldu"..................................passed
+And user clicks save2 button................................................passed
+Then user asserts new record on properties..................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
