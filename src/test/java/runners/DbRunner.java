@@ -11,11 +11,11 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
 
         features="src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@hotelroomedit",
-                dryRun = false
+        glue = "database_stepdefinitions",
+        tags = "@dbokuma",
+        dryRun = false
 
 )
-public class KoalaPalaceRunner {
+public class DbRunner {
 
 }
